@@ -1,0 +1,215 @@
+body {
+  margin:0;
+  padding:0;
+  background-color:#283747;
+}
+
+p {
+  font-family:sans-serif;
+  color:white;
+  text-indent:20px;
+}
+
+.centerthetext {
+  text-align:center;
+  text-indent:0; /*Reset it if the class is formatted that way*/
+}
+a {
+  font-family:sans-serif;
+}
+h1 {
+  margin:0;
+  font-family: 'Montserrat', sans-serif;
+  /*Font from https://fonts.google.com/specimen/Montserrat*/
+  text-align:center;
+  color:white;
+  text-shadow:1px 1px 10px black;
+}
+
+h2 {
+  font-family: 'Roboto Mono', monospace;
+  color:white;
+  text-align:center;
+}
+
+.para-header {
+  padding-top:20vh;
+  text-shadow:1px 1px 5px black;
+}
+/*Parallax*/
+
+.parallax-img {
+  background-image: url("img/background.png");
+  height: 50vh;
+
+  /* Do the thing and do it gud */
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /*Other stuff*/
+  /*padding:40vh;*/
+}
+
+.parallax-img-vmf {
+  background-image: url("img/editorbackground.png");
+  height: 50vh;
+
+  /* Do the thing and do it gud */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.button {
+  display:block;
+  text-align:center;
+  background-image: url("img/button.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:30%;
+  margin-left:auto;
+  margin-right:auto;
+  padding:2.5%;
+  border-radius:100px;
+  color:white;
+  text-decoration:none;
+}
+
+.main {
+  margin:5%;
+  /*things like the navbar HAVE to sit edge-to-edge with no margin but text looks god awful with no margin*/
+}
+
+footer {
+  padding:5%; /*so .main is transparent and shows the color of the page which is why it gets away with margins. This isn't so lucky*/
+  background-color:#17202A;
+}
+
+.navwrapper {
+  /*Make navbar stick to the screen without altering the code*/
+  /*I've made it stick without this before with almost the exact same code but ehh*/
+  position:fixed;
+  width:100%; /*So it doesn't shrink to minimum width, keep width blah blah blah*/
+}
+
+/*For the footer list of credits*/
+.creditlist {
+  list-style-type:none;
+  text-align:center;
+  text-indent:0; /*make sure there's no indentation as this puts it slightly off center which yes, i noticed, and yes, creates uncanny valley content*/
+}
+
+.credititem {
+  text-decoration:none;
+  font-family:monospace;
+}
+
+.socialicon {
+  background-color:white;
+  display:inline-block;
+  padding:1%;
+  border-radius:25px;
+  width:125px;
+  height:125px;
+}
+
+
+.socialdisplay {
+  /*Center it*/
+  text-align:center; /*the <a> tag counts as text even to here its an image*/
+  /*background-color:magenta; /*basically here as a visual way to see what the div is*/
+}
+
+.fillContainer {
+  width:100%;
+}
+/*THIRD PARTY CODE*/
+/*NAVBAR https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
+/* Add a black background color to the top navigation */
+.topnav {
+  background-image: url("img/Navbar.png");
+  background-position:center; /*without this it's mostly dark, in fact fully dark on mobile. With it, it's very blue.*/
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition-duration:1s;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+  transition-duration:0.5s;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #399DCB;
+  color: white;
+
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+    position:absolute;
+    right:0;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+
+
+/*
+I used to roll the dice
+feel my [redacted] in my enemy's [slot]
+listen as the crowd could sing
+now the old kind is dead
+lol
+one minute i held my [acorns]
+next my [spheres] were closed on me
+and i discovered sans
+upon pillars of salt
+pillars of salt
+pillars of salt
+i hear jackie chan singing
+omae wa shinderu
+i [attacked] my [sausage]
+my soOoOoOoOos
+for some reason i cant explain
+we live in a society
+where gamers dont rule the world
+*/
