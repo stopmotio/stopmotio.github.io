@@ -63,6 +63,22 @@ h2 {
   background-size: cover;
 }
 
+.parallax-img-404 {
+  background-image: url("img/background.png"); /*One day it'll get it's own background. Maybe.*/
+  height: 100vh;
+
+  /* Do the thing and do it gud */
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.para-header-tall {
+  padding-top:50vh; /*For (you guessed it) tall parallaxes such as 404.*/
+  text-shadow:1px 1px 5px black;
+}
+
 .button {
   display:block;
   text-align:center;
