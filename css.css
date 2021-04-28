@@ -127,6 +127,33 @@ footer {
 .fillContainer {
   width:100%;
 }
+
+.demoimg {
+  float:left;
+  width:30%;
+}
+
+.ibutton {
+  display:inline-block; /*needed to change this so i made an entirely new class*/
+  text-align:center;
+  background-image: url("img/button.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:30vw;
+  padding:2.5%;
+  border-radius:100px;
+  color:white;
+  text-decoration:none;
+}
+
+
+.buttondiv {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  width:80%;
+}
 /*THIRD PARTY CODE*/
 /*NAVBAR https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
 /* Add a black background color to the top navigation */
