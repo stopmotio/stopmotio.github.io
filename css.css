@@ -17,6 +17,10 @@ p {
 a {
   font-family:sans-serif;
 }
+a:visited {
+  color:green;
+  /*Purple is nigh impossible to see on the dark background*/
+}
 h1 {
   margin:0;
   font-family: 'Montserrat', sans-serif;
@@ -147,6 +151,9 @@ footer {
 .demoimg {
   float:left;
   width:30%;
+  height:auto;
+  max-height:30vh;
+  object-fit:contain;
 }
 
 .ibutton {
@@ -161,6 +168,9 @@ footer {
   border-radius:100px;
   color:white;
   text-decoration:none;
+}
+a:visited.ibutton  {
+  color:white; /*Force disable custom visited color*/
 }
 
 
