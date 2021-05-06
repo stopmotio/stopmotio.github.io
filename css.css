@@ -181,7 +181,7 @@ footer {
 a:visited.ibutton  {
   color:white; /*Force disable custom visited color*/
 }
-.ibutton_triplet {
+.ibutton-triplet {
   display:inline-block; /
   text-align:center;
   background-image: url("img/button.png");
@@ -194,7 +194,7 @@ a:visited.ibutton  {
   color:white;
   text-decoration:none;
 }
-a:visited.ibutton_triplet {
+a:visited.ibutton-triplet {
   color:white;
 }
 
