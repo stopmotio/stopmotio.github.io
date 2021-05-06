@@ -99,6 +99,7 @@ h2 {
   text-decoration:none;
 }
 
+
 .main {
   margin:5%;
   /*things like the navbar HAVE to sit edge-to-edge with no margin but text looks god awful with no margin*/
@@ -180,7 +181,22 @@ footer {
 a:visited.ibutton  {
   color:white; /*Force disable custom visited color*/
 }
-
+.ibutton_triplet {
+  display:inline-block; /
+  text-align:center;
+  background-image: url("img/button.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:15vw;
+  padding:2.5%;
+  border-radius:100px;
+  color:white;
+  text-decoration:none;
+}
+a:visited.ibutton_triplet {
+  color:white;
+}
 
 .buttondiv {
   display:block;
