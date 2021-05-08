@@ -98,7 +98,9 @@ h2 {
   color:white;
   text-decoration:none;
 }
-
+a.button:visited {
+  color:white; /*Override visited link color*/
+}
 
 .main {
   margin:5%;
@@ -268,7 +270,11 @@ a:visited.ibutton-triplet {
   }
 }
 
-
+code {
+  background-color:#1b2631;
+  padding:5px;
+  border-radius:10px;
+}
 
 /*
 I used to roll the dice
