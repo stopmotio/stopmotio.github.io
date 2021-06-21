@@ -90,12 +90,12 @@ h2 {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width:30%;
+  width:min(30%, 300px);
   margin-left:auto;
   font-family: 'Ubuntu', sans-serif;
   font-size:20px;
   margin-right:auto;
-  padding:2.5%;
+  padding: min(2.5%, 30px);
   border-radius:100px;
   color:white;
   text-decoration:none;
@@ -181,7 +181,7 @@ footer {
   background-size: cover;
   font-family: 'Ubuntu', sans-serif;
   font-size:20px;
-  width:25vw;
+  width:max(25vw,150px);
   padding:2.5%;
   border-radius:100px;
   color:white;
@@ -191,15 +191,15 @@ a:visited.ibutton  {
   color:white; /*Force disable custom visited color*/
 }
 .ibutton-triplet {
-  display:inline-block; /
-  text-align:center;
+  display:inline-block;
   background-image: url("img/button.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Ubuntu', sans-serif;
   font-size:20px;
-  width:15vw;
+  width: max(15vw, 100px);
+  text-align:center;
   padding:2.5%;
   border-radius:100px;
   color:white;
@@ -210,10 +210,12 @@ a:visited.ibutton-triplet {
 }
 
 .buttondiv {
-  display:block;
+  display:flex;
   margin-left:auto;
   margin-right:auto;
   width:100%;
+  flex-direction:row;
+  justify-content:space-around;
 }
 /*THIRD PARTY CODE*/
 /*NAVBAR https://www.w3schools.com/howto/howto_js_topnav_responsive.asp*/
@@ -221,6 +223,7 @@ a:visited.ibutton-triplet {
 .topnav {
   background-image: url("img/Navbar.png");
   background-position:center; /*without this it's mostly dark, in fact fully dark on mobile. With it, it's very blue.*/
+  background-repeat:round; /*Better scaling for ultrawide. When width crosses to 3840x1080 (both the monitors) is still broken but works better now.*/
   overflow: hidden;
 }
 
