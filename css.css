@@ -223,7 +223,7 @@ a:visited.ibutton-triplet {
 .topnav {
   background-image: url("img/Navbar.png");
   background-position:center; /*without this it's mostly dark, in fact fully dark on mobile. With it, it's very blue.*/
-  background-repeat:round; /*Better scaling for ultrawide. When width crosses to 3840x1080 (both the monitors) is still broken but works better now.*/
+  /* background-repeat:round; /* Better scaling for ultra wide, but broke mobile compat on Chrome.*/
   overflow: hidden;
 }
 
