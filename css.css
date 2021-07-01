@@ -43,7 +43,7 @@ h2 {
 /*Parallax*/
 
 .parallax-img {
-  background-image: url("img/background.png");
+  background-image: url("img/backgrounds/default.png");
   height: 50vh;
 
   /* Do the thing and do it gud */
@@ -56,8 +56,19 @@ h2 {
   /*padding:40vh;*/
 }
 
+.parallax-img-instagram {
+  background-image: url("img/backgrounds/insta.jpg");
+  height: 50vh;
+
+  /* Do the thing and do it gud */
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .parallax-img-vmf {
-  background-image: url("img/editorbackground.png");
+  background-image: url("img/backgrounds/editorbackground.png");
   height: 50vh;
 
   /* Do the thing and do it gud */
@@ -68,7 +79,7 @@ h2 {
 }
 
 .parallax-img-404 {
-  background-image: url("img/background.png"); /*One day it'll get it's own background. Maybe.*/
+  background-image: url("img/backgrounds/default.png"); /*One day it'll get it's own background. Maybe.*/
   height: 100vh;
 
   /* Do the thing and do it gud */
@@ -150,6 +161,23 @@ footer {
   /*Center it*/
   text-align:center; /*the <a> tag counts as text even to here its an image*/
   /*background-color:magenta; /*basically here as a visual way to see what the div is*/
+}
+
+.iggrid {
+  display:flex;
+  flex-flow: row wrap;
+  justify-content:center;
+}
+
+.igimg {
+  border-radius:15px;
+  border-color:navy; /*Avoid transitioning from default*/
+  max-width:256px;
+  box-sizing:border-box;
+}
+.igimg:hover {
+  transition-duration:1s;
+  border: 10px solid navy;
 }
 
 .fillContainer {
