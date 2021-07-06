@@ -43,8 +43,14 @@
 <div class="main">
   <h2>Click on the image/video you saw the link on instagram, and you'll be brought to the link.</h2>
   <div class="iggrid">
-    <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2532980342"><img src="img/social/instagram/p2small.png" class="igimg"></a>
+    <button class="nostyle" onclick="igpopupctrl('laserselect','block');"><img src="img/social/instagram/p2small.png" class="igimg"></button>
   </div>
+</div>
+<div id="laserselect" class="ighiddenpopup">
+  <h1>Multiple links are attached to this post. Select one:</h1>
+  <a class="button" href="https://www.youtube.com/watch?v=yqsKmcxPSJA">HD YouTube version</a><br>
+  <a class="button" href="https://steamcommunity.com/sharedfiles/filedetails/?id=2532980342">Download on Steam Workshop</a>
+  <button class="cornerbtn-close" onclick="igpopupctrl('laserselect','none');"></button>
 </div>
 <footer>
   <h2>Third Party code</h2>
@@ -54,5 +60,13 @@
     <li><a href="https://www.w3schools.com" class="credititem">W3Schools</a></li>
   </ul>
 </footer>
+<script>
+// This is specific to this page
+// DOM will be ready when this loads
+function igpopupctrl(id,what) {
+    document.getElementById(id).style.display = what;
+    //So block opens, none closes.
+}
+</script>
 </body>
 </html>

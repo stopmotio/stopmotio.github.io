@@ -175,9 +175,40 @@ footer {
   max-width:256px;
   box-sizing:border-box;
 }
+
+button.nostyle {
+  border:0 solid black;
+  background-color:transparent;
+}
+
 .igimg:hover {
   transition-duration:1s;
   border: 10px solid navy;
+}
+
+.ighiddenpopup {
+  display:none;
+  position:fixed;
+  top:0;
+  margin:10%;
+  width:70vw;
+  margin-top:30vh;
+  background-color:#17202A;
+  padding:5%;
+  border: 2px solid #283747;
+  border-radius:15px;
+}
+
+.cornerbtn-close {
+  position:absolute;
+  top:0;
+  right:0;
+  background-image: url(img/Closebtn.png);
+  background-size:contain;
+  background-color:transparent;
+  border:0;
+  width:30px;
+  height:30px
 }
 
 .fillContainer {
