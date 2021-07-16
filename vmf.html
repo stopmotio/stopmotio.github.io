@@ -26,16 +26,15 @@
 <body>
 <!--Navbar from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="navwrapper">
-<div class="topnav" id="myTopnav">
-  <a href="vmf.html"  class="active">VMF files</a>
-  <a href="index.html">Home</a>
-  <a href="repos.html">Repos/work</a>
-  <a href="igbio.html">Instagram Bio Links</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div></div>
+<div class="nav">
+  <button class="nav-mobile-open" onclick="NavToggle();">&#9776;</button>
+  <div class="nav-plist" id="navlist">
+    <a class="nav-page" href="index.html">Home</a>
+    <a class="nav-page" href="vmf.html">VMF files</a>
+    <a class="nav-page" href="repos.html">Repos/work</a>
+    <a class="nav-page" href="igbio.html">Instagram Bio Links</a>
+  </div>
+</div>
 
 <div class="parallax-img-vmf">
   <h1 class="para-header">Want VMF files?</h1>
