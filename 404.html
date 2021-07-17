@@ -24,19 +24,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!--remind me why we still need to type this, why the mobile can't assume this yet?-->
 </head>
 <body>
-<!--Navbar from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<div class="navwrapper">
-<div class="topnav" id="myTopnav">
-  <a class="active">Error</a>
-  <a href="index.html">Home</a>
-  <a href="vmf.html">VMF files</a>
-  <a href="repos.html">Repos/work</a>
-  <a href="igbio.html">Instagram Bio Links</a>
-  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-    <i class="fa fa-bars"></i>
-  </a>
-</div></div>
+<div class="nav">
+  <button class="nav-mobile-open" onclick="NavToggle();">&#9776;</button>
+  <div class="nav-plist" id="navlist">
+    <a class="nav-page" href="index.html">Home</a>
+    <a class="nav-page" href="vmf.html">VMF files</a>
+    <a class="nav-page" href="repos.html">Repos/work</a>
+    <a class="nav-page" href="igbio.html">Instagram Bio Links</a>
+  </div>
+</div>
 
 <div class="parallax-img-404">
   <h1 class="para-header-tall">That page doesn't exist.</h1>
@@ -45,15 +41,18 @@
 <div class="main">
   <h2>Note:</h2>
   <p>The published version of this page seems to lag behind the actual repository by 10 minutes. If you've seen a commit, please wait 10 minutes to view or, alternatively, download the source.</p>
-  <h2>Wait, why is there an "error" tab?</h2>
-  <p>On mobile phones, the leftmost link will become the only one shown. Instead of making/getting a better navbar, I did this.</p>
 </div>
 <footer>
-  <h2>Third Party code</h2>
-  <p style="text-align:center;">Good coders give credit.</p>
+  <h2>stopmotio.github.io</h2>
+  <p>Fonts from <a href="https://fonts.google.com/">Google Fonts.</a></p>
+  <p>Wanna learn webdev yourself? Here are some places to start:</p>
   <ul class="creditlist">
-    <li><a href="https://fonts.google.com/" class="credititem">Google Fonts</a></li>
-    <li><a href="https://www.w3schools.com" class="credititem">W3Schools</a></li>
+    <li class="credititem"><a href="https://code.org/">Code.org</a> - Learn basic HTML and other coding languages in the browser.</li>
+    <li class="credititem"><a href="https://www.codecademy.com/">Codecademy</a> - Another place to learn with many different courses.</li>
+    <li class="credititem"><a href="https://www.w3schools.com/">W3Schools</a> - A good reference for learning new HTML/CSS features and tags with an already established skillset. Also has samples of different designs with all the code included
+&#8212; Great for learning how to do very tough things like responsive navigation.</li>
+  <li class="credititem"><a href="https://pages.github.com/">GitHub Pages</a> - Free hosting for your projects, and a great way to learn Git. No serverside code though.</li>
+  <li class="credititem"><a href="https://atom.io/">Atom</a> - A free flexible extended text editor. Fantastic auto-complete, (and if it doesn't work you can extend it with add-ons) Integrates directly into Git and GitHub for easy version control.</li>
   </ul>
 </footer>
 </body>
