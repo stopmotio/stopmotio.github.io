@@ -188,10 +188,8 @@ h2 {
 .button {
   display:block;
   text-align:center;
-  background-image: url("img/button.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: rgb(0,0,0);
+background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
   width:min(30%, 300px);
   margin-left:auto;
   font-family: 'Ubuntu', sans-serif;
@@ -201,9 +199,6 @@ h2 {
   border-radius:100px;
   color:white;
   text-decoration:none;
-}
-.button:hover {
-  /*Did you know that CSS can't transition backgroundimages? well, it turns out, it can't. ugh.*/
 }
 a.button:visited {
   color:white; /*Override visited link color*/
@@ -254,7 +249,6 @@ footer {
 .socialdisplay {
   /*Center it*/
   text-align:center; /*the <a> tag counts as text even to here its an image*/
-  /*background-color:magenta; /*basically here as a visual way to see what the div is*/
 }
 
 .iggrid {
@@ -328,10 +322,8 @@ button.nostyle {
 .ibutton {
   display:inline-block; /*needed to change this so i made an entirely new class*/
   text-align:center;
-  background-image: url("img/button.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: rgb(0,0,0);
+background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
   font-family: 'Ubuntu', sans-serif;
   font-size:20px;
   width:max(25vw,150px);
@@ -345,10 +337,8 @@ a:visited.ibutton  {
 }
 .ibutton-triplet {
   display:inline-block;
-  background-image: url("img/button.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: rgb(0,0,0);
+background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
   font-family: 'Ubuntu', sans-serif;
   font-size:20px;
   width: max(15vw, 100px);
