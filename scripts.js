@@ -15,9 +15,9 @@ function NavFix() {
     //This opens the mobile selector if present.
   } else {
     document.getElementById('navlist').style.display = "none";
-    //Hide the jank. Gotta love hardcoding things to run that should Just Work!!
   }
 }
+//Might not be as big of an issue on Chrome, dunno.
 
 window.onresize = NavFix;
 document.addEventListener('DOMContentLoaded', NavFix); //Makes the nav button functional way quicker, for some reason.

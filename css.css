@@ -60,7 +60,7 @@ p {
     margin-right:auto;
   }
   .nav-mobile-open {
-    background: #2c19a6 url('img/Hamburg-menu.png');
+    background: #2c19a6;
     background-position:center;
     background-repeat:no-repeat;
     background-size:cover;
