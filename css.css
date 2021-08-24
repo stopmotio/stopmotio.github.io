@@ -74,15 +74,16 @@ p {
   .nav-plist {
     display:none; /*FLEX for ON, NONE for OFF*/
     position:fixed;
+    /*padding-top:50px; /*Fix for when there are more than 5 links, but breaks when it actually fits*/
     width:100%;
     box-sizing:border-box;
-    height:70vw;
+    height:80vw;
     bottom:50px;
     background: rgb(0,0,0);
     background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(0,29,115,1) 100%);
     left:0;
     border-radius:30px;
-    overflow:contain;
+    overflow:scroll;
     flex-flow:column nowrap;
     justify-content: space-around;
   }
@@ -90,8 +91,10 @@ p {
     background-color:rgba(255,255,255,0.2);
     display:block;
     margin:1%;
+    margin-left:auto;
+    margin-right:auto;
     border-radius:70px;
-    width:100%;
+    width:95%;
     color:white;
     box-sizing:border-box;
     text-decoration:none;
@@ -104,6 +107,10 @@ p {
   }
 }
 
+ul {
+  font-family:sans-serif;
+  color:white;
+}
 .centerthetext {
   text-align:center;
   text-indent:0; /*Reset it if the class is formatted that way*/
