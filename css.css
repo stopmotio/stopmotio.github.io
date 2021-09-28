@@ -14,11 +14,17 @@ p {
   /*Then we deliver the desktop stylesheet navbar*/
   .nav {
     position:fixed;
+    transition-duration:0.5s; /*We need this to tell the browser to transition slowly back to normal*/
     width:100%;
     margin:0;
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,29,115,1) 100%);
     height:30px;
+  }
+  
+  .nav:hover {
+    transition-duration:0.5s;
+    padding:5px;
   }
   .nav-mobile-open {
     display:none; /*Get rid of this*/
@@ -29,6 +35,7 @@ p {
   }
 
   .nav-page {
+    transition-duration:0.5s;
     text-decoration:none;
     color:white;
     padding:5px;
@@ -43,6 +50,7 @@ p {
   .nav-page:hover {
     transition-duration:0.5s;
     color:blue;
+    font-size:20px;
   }
 }
 
@@ -196,9 +204,10 @@ h2 {
   display:block;
   text-align:center;
   background: rgb(0,0,0);
-background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
+  background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
   width:min(30%, 300px);
   margin-left:auto;
+  box-sizing:border-box;
   font-family: 'Ubuntu', sans-serif;
   font-size:20px;
   margin-right:auto;
@@ -206,7 +215,21 @@ background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
   border-radius:100px;
   color:white;
   text-decoration:none;
+  transition-duration:0.5s;
 }
+
+.button:hover {
+  transition-duration:0.5s;
+  border-radius:20px;
+}
+
+.button:focus-visible {
+  /*Fill the focus thing when tabbed on*/
+  transition-duration:0.5s;
+  border-radius:0px;
+  /*FF may be different, but it's still good looking*/
+}
+
 a.button:visited {
   color:white; /*Override visited link color*/
 }
@@ -244,6 +267,7 @@ footer {
 }
 
 .socialicon {
+  transition-duration:1s;
   background-color:white;
   display:inline-block;
   padding:1%;
@@ -252,10 +276,29 @@ footer {
   height:125px;
 }
 
+.socialicon:hover {
+  transition-duration:1s;
+  border-radius:75px;
+  padding:0%;
+  margin:1%;
+  background-color:transparent;
+}
+
+.socialicon:focus-visible {
+  transition-duration:0.5s;
+  /*Reset stuff*/
+  border-radius:0px; /*Except sharp corners :)*/
+  padding:1%;
+  margin:0%;
+  background-color:white;
+}
+
 
 .socialdisplay {
   /*Center it*/
   text-align:center; /*the <a> tag counts as text even to here its an image*/
+  /*Excuse me what in the world does that comment say*/
+  /*I should delete it but it's too funny*/
 }
 
 .iggrid {
@@ -338,6 +381,17 @@ background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
   border-radius:100px;
   color:white;
   text-decoration:none;
+  transition-duration:0.5s;
+}
+.ibutton:hover {
+  transition-duration:0.5s;
+  border-radius:20px;
+}
+
+.ibutton:focus-visible {
+  /*Fill the focus thing when tabbed on*/
+  transition-duration:0.5s;
+  border-radius:0px;
 }
 a:visited.ibutton  {
   color:white; /*Force disable custom visited color*/
@@ -354,6 +408,17 @@ background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
   border-radius:100px;
   color:white;
   text-decoration:none;
+transition-duration:0.5s;
+}
+.ibutton-triplet:hover {
+  transition-duration:0.5s;
+  border-radius:20px;
+}
+
+.ibutton-triplet:focus-visible {
+  /*Fill the focus thing when tabbed on*/
+  transition-duration:0.5s;
+  border-radius:0px;
 }
 a:visited.ibutton-triplet {
   color:white;
