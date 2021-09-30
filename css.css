@@ -357,14 +357,14 @@ button.nostyle {
   float:left;
   width:30%;
   height:auto;
-  max-height:30vh;
+  max-height:35vh;
   object-fit:contain;
 }
 
 .demoimg:hover {
   transition-duration:1s;
   width:50vw;
-  max-height:100vh;
+  max-height:60vh;
 }
 
 /*.demoimgright {
