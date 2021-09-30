@@ -205,7 +205,7 @@ h2 {
   text-align:center;
   background: rgb(0,0,0);
   background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
-  width:min(30%, 300px);
+  width:min(35%, 300px);
   margin-left:auto;
   box-sizing:border-box;
   font-family: 'Ubuntu', sans-serif;
@@ -295,7 +295,6 @@ footer {
 
 
 .socialdisplay {
-  /*Center it*/
   text-align:center; /*the <a> tag counts as text even to here its an image*/
   /*Excuse me what in the world does that comment say*/
   /*I should delete it but it's too funny*/
@@ -354,6 +353,7 @@ button.nostyle {
 }
 
 .demoimg {
+  transition-duration:1s;
   float:left;
   width:30%;
   height:auto;
@@ -361,19 +361,24 @@ button.nostyle {
   object-fit:contain;
 }
 
-.demoimgright {
-  /*Maybe this way the images will stop attacking each other's repos*/
+.demoimg:hover {
+  transition-duration:1s;
+  width:50vw;
+  max-height:100vh;
+}
+
+/*.demoimgright {
   float:right;
   width:30%;
   height:auto;
   max-height:30vh;
   object-fit:contain;
-}
+} /* Probably should delete for better perfs*/
 .ibutton {
   display:inline-block; /*needed to change this so i made an entirely new class*/
   text-align:center;
   background: rgb(0,0,0);
-background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
+  background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
   font-family: 'Ubuntu', sans-serif;
   font-size:20px;
   width:max(25vw,150px);
