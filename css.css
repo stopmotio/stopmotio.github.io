@@ -92,6 +92,7 @@ p {
     left:0;
     border-radius:30px;
     overflow:scroll;
+    /*Flexbox ordering*/
     flex-flow:column nowrap;
     justify-content: space-around;
   }
@@ -151,22 +152,15 @@ h2 {
 .parallax-img {
   background-image: url("img/backgrounds/default.png");
   height: 50vh;
-
-  /* Do the thing and do it gud */
   background-attachment: fixed;
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-
-  /*Other stuff*/
-  /*padding:40vh;*/
 }
 
 .parallax-img-instagram {
   background-image: url("img/backgrounds/insta.jpg");
   height: 50vh;
-
-  /* Do the thing and do it gud */
   background-attachment: fixed;
   background-position: left;
   background-repeat: no-repeat;
@@ -176,8 +170,6 @@ h2 {
 .parallax-img-vmf {
   background-image: url("img/backgrounds/editorbackground.png");
   height: 50vh;
-
-  /* Do the thing and do it gud */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -185,10 +177,8 @@ h2 {
 }
 
 .parallax-img-404 {
-  background-image: url("img/backgrounds/default.png"); /*One day it'll get it's own background. Maybe.*/
+  background-image: url("img/backgrounds/default.png"); /*Eventually these will get their own images*/
   height: 100vh;
-
-  /* Do the thing and do it gud */
   background-attachment: fixed;
   background-position: left;
   background-repeat: no-repeat;
@@ -227,7 +217,7 @@ h2 {
   /*Fill the focus thing when tabbed on*/
   transition-duration:0.5s;
   border-radius:0px;
-  /*FF may be different, but it's still good looking*/
+  /*FF may be different, but it's still good looking on both*/
 }
 
 a.button:visited {
@@ -236,28 +226,22 @@ a.button:visited {
 
 .main {
   margin:5%;
-  /*things like the navbar HAVE to sit edge-to-edge with no margin but text looks god awful with no margin*/
 }
 
 footer {
-  padding:5%; /*so .main is transparent and shows the color of the page which is why it gets away with margins. This isn't so lucky*/
+  padding:5%; /*Needs padding because it has color*/
   background-color:#17202A;
   text-align:center;
-  padding-bottom:50px; /*Scroll "docker" space that holds the menu button at the bottom for mobile.*/
+  padding-bottom:50px; /*Scroll "docker" space that holds the menu button at the bottom for mobile. Looks decent on desktop too.*/
 }
 
-.navwrapper {
-  /*Make navbar stick to the screen without altering the code*/
-  /*I've made it stick without this before with almost the exact same code but ehh*/
-  position:fixed;
-  width:100%; /*So it doesn't shrink to minimum width, keep width blah blah blah*/
-}
+/*Navwrapper removed here*/
 
 /*For the footer list of credits*/
 .creditlist {
   list-style-type:none;
   text-align:center;
-  text-indent:0; /*make sure there's no indentation as this puts it slightly off center which yes, i noticed, and yes, creates uncanny valley content*/
+  text-indent:0; /*For whatever reason, still off-center on screens bigger than 768p*/
 }
 
 .credititem {
@@ -295,9 +279,7 @@ footer {
 
 
 .socialdisplay {
-  text-align:center; /*the <a> tag counts as text even to here its an image*/
-  /*Excuse me what in the world does that comment say*/
-  /*I should delete it but it's too funny*/
+  text-align:center;
 }
 
 .iggrid {
@@ -313,7 +295,7 @@ footer {
   box-sizing:border-box;
 }
 
-button.nostyle {
+button.nostyle { /*Fix some fringe issues with HTML buttons, mostly on the ig bit*/
   border:0 solid black;
   background-color:transparent;
 }
@@ -367,13 +349,8 @@ button.nostyle {
   max-height:60vh;
 }
 
-/*.demoimgright {
-  float:right;
-  width:30%;
-  height:auto;
-  max-height:30vh;
-  object-fit:contain;
-} /* Probably should delete for better perfs*/
+/*Demoimgright removed because it was better to use inline CSS to do that.*/
+
 .ibutton {
   display:inline-block; /*needed to change this so i made an entirely new class*/
   text-align:center;
@@ -421,7 +398,6 @@ transition-duration:0.5s;
 }
 
 .ibutton-triplet:focus-visible {
-  /*Fill the focus thing when tabbed on*/
   transition-duration:0.5s;
   border-radius:0px;
 }
@@ -430,7 +406,7 @@ a:visited.ibutton-triplet {
 }
 
 .buttondiv {
-  display:flex;
+  display:flex; /*Without flex, it looked weird.*/
   margin-left:auto;
   margin-right:auto;
   width:100%;
