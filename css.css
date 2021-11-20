@@ -386,14 +386,16 @@ a:visited.ibutton  {
   text-align:center;
   background: rgb(0,0,0);
   background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
-  max-width:70px;
-  max-height:70px;
-  padding:1%;
+  max-width:max(7vw, 90px);
+  max-height:max(7vw, 90px);
+  padding:0.5%;
   border-radius:70px;
   color:white;
   text-decoration:none;
   transition-duration:0.5s;
   box-sizing:border-box;
+  position:absolute;
+  right:0;
 }
 
 .ibutton-icon:hover {
@@ -413,8 +415,8 @@ a:visited.ibutton-icon  {
 
 .ibutton-icon {
   /*Specific to the icon image*/
-  height:100%;
-  width:100%;
+  height:max(6vw,60px);
+  width:max(6vw,60px);
 }
 
 .ibutton-triplet {
