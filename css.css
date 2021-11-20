@@ -21,7 +21,7 @@ p {
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,29,115,1) 100%);
     height:30px;
   }
-  
+
   .nav:hover {
     transition-duration:0.5s;
     padding:5px;
@@ -365,6 +365,7 @@ button.nostyle { /*Fix some fringe issues with HTML buttons, mostly on the ig bi
   text-decoration:none;
   transition-duration:0.5s;
 }
+
 .ibutton:hover {
   transition-duration:0.5s;
   border-radius:20px;
@@ -378,6 +379,44 @@ button.nostyle { /*Fix some fringe issues with HTML buttons, mostly on the ig bi
 a:visited.ibutton  {
   color:white; /*Force disable custom visited color*/
 }
+
+.ibutton-icon {
+  /*for icon-sized buttons*/
+  display:inline-block;
+  text-align:center;
+  background: rgb(0,0,0);
+  background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
+  max-width:70px;
+  max-height:70px;
+  padding:1%;
+  border-radius:70px;
+  color:white;
+  text-decoration:none;
+  transition-duration:0.5s;
+  box-sizing:border-box;
+}
+
+.ibutton-icon:hover {
+  transition-duration:0.5s;
+  border-radius:20px;
+  padding:0.5%;
+}
+
+.ibutton-icon:focus-visible {
+  /*Fill the focus thing when tabbed on*/
+  transition-duration:0.5s;
+  border-radius:0px;
+}
+a:visited.ibutton-icon  {
+  color:white; /*Force disable custom visited color*/
+}
+
+.ibutton-icon {
+  /*Specific to the icon image*/
+  height:100%;
+  width:100%;
+}
+
 .ibutton-triplet {
   display:inline-block;
   background: rgb(0,0,0);
