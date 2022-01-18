@@ -195,7 +195,7 @@ h2 {
   text-align:center;
   background: rgb(0,0,0);
   background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
-  width:min(35%, 300px);
+  width:min(35%, 500px);
   margin-left:auto;
   box-sizing:border-box;
   font-family: 'Ubuntu', sans-serif;
