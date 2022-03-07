@@ -193,8 +193,8 @@ h2 {
 .button {
   display:block;
   text-align:center;
-  background: rgb(0,0,0);
-  background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
+  background: rgb(20,25,133);
+  background: radial-gradient(circle, rgba(20,25,133,1) 0%, rgba(22,22,105,1) 100%);
   width:min(35%, 500px);
   margin-left:auto;
   box-sizing:border-box;
@@ -210,18 +210,124 @@ h2 {
 
 .button:hover {
   transition-duration:0.5s;
-  border-radius:20px;
+  border-radius:15px;
+  width:65%;
 }
 
 .button:focus-visible {
-  /*Fill the focus thing when tabbed on*/
+  /*Fill the focus thing when tabbed on (Chrome only; FF rounds it)*/
   transition-duration:0.5s;
   border-radius:0px;
-  /*FF may be different, but it's still good looking on both*/
 }
 
 a.button:visited {
   color:white; /*Override visited link color*/
+}
+/*moved these to put em together :)*/
+.ibutton {
+  display:inline-block;
+  text-align:center;
+  background: rgb(20,25,133);
+  background: radial-gradient(circle, rgba(20,25,133,1) 0%, rgba(22,22,105,1) 100%);
+  font-family: 'Ubuntu', sans-serif;
+  font-size:20px;
+  width:max(25vw,150px);
+  padding:2.5%;
+  border-radius:100px;
+  color:white;
+  text-decoration:none;
+  transition-duration:0.5s;
+}
+
+.ibutton:hover {
+  transition-duration:0.5s;
+  border-radius:15px;
+  width:min(45%, 700px);
+}
+
+.ibutton:focus-visible {
+  /*Fill the focus thing when tabbed on*/
+  transition-duration:0.5s;
+  border-radius:0px;
+}
+a:visited.ibutton  {
+  color:white; /*Force disable custom visited color*/
+}
+
+.ibutton-icon {
+  /*for icon-sized buttons*/
+  display:inline-block;
+  text-align:center;
+  background: rgb(20,25,133);
+  background: radial-gradient(circle, rgba(20,25,133,1) 0%, rgba(22,22,105,1) 100%);
+  max-width:max(7vw, 90px);
+  max-height:max(7vw, 90px);
+  padding:0.5%;
+  border-radius:70px;
+  color:white;
+  text-decoration:none;
+  transition-duration:0.5s;
+  box-sizing:border-box;
+  position:absolute;
+  right:0;
+}
+
+.ibutton-icon:hover {
+  transition-duration:0.5s;
+  border-radius:20px;
+  padding:0.5%;
+}
+
+.ibutton-icon:focus-visible {
+  /*Fill the focus thing when tabbed on*/
+  transition-duration:0.5s;
+  border-radius:0px;
+}
+a:visited.ibutton-icon  {
+  color:white; /*Force disable custom visited color*/
+}
+
+.ibutton-icon {
+  /*Specific to the icon image*/
+  height:max(6vw,60px);
+  width:max(6vw,60px);
+}
+
+.ibutton-triplet {
+  /*HAS OLD BUTTON DESIGN, NOT CURRENTLY USED!*/
+  display:inline-block;
+  background: rgb(20,25,133);
+  background: radial-gradient(circle, rgba(20,25,133,1) 0%, rgba(22,22,105,1) 100%);
+  font-family: 'Ubuntu', sans-serif;
+  font-size:20px;
+  width: max(15vw, 100px);
+  text-align:center;
+  padding:2.5%;
+  border-radius:100px;
+  color:white;
+  text-decoration:none;
+  transition-duration:0.5s;
+}
+.ibutton-triplet:hover {
+  transition-duration:0.5s;
+  border-radius:20px;
+}
+
+.ibutton-triplet:focus-visible {
+  transition-duration:0.5s;
+  border-radius:0px;
+}
+a:visited.ibutton-triplet {
+  color:white;
+}
+
+.buttondiv {
+  display:flex; /*Without flex, it looked weird.*/
+  margin-left:auto;
+  margin-right:auto;
+  width:100%;
+  flex-direction:row;
+  justify-content:space-around;
 }
 
 .main {
@@ -350,107 +456,3 @@ button.nostyle { /*Fix some fringe issues with HTML buttons, mostly on the ig bi
 }
 
 /*Demoimgright removed because it was better to use inline CSS to do that.*/
-
-.ibutton {
-  display:inline-block; /*needed to change this so i made an entirely new class*/
-  text-align:center;
-  background: rgb(0,0,0);
-  background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
-  font-family: 'Ubuntu', sans-serif;
-  font-size:20px;
-  width:max(25vw,150px);
-  padding:2.5%;
-  border-radius:100px;
-  color:white;
-  text-decoration:none;
-  transition-duration:0.5s;
-}
-
-.ibutton:hover {
-  transition-duration:0.5s;
-  border-radius:20px;
-}
-
-.ibutton:focus-visible {
-  /*Fill the focus thing when tabbed on*/
-  transition-duration:0.5s;
-  border-radius:0px;
-}
-a:visited.ibutton  {
-  color:white; /*Force disable custom visited color*/
-}
-
-.ibutton-icon {
-  /*for icon-sized buttons*/
-  display:inline-block;
-  text-align:center;
-  background: rgb(0,0,0);
-  background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
-  max-width:max(7vw, 90px);
-  max-height:max(7vw, 90px);
-  padding:0.5%;
-  border-radius:70px;
-  color:white;
-  text-decoration:none;
-  transition-duration:0.5s;
-  box-sizing:border-box;
-  position:absolute;
-  right:0;
-}
-
-.ibutton-icon:hover {
-  transition-duration:0.5s;
-  border-radius:20px;
-  padding:0.5%;
-}
-
-.ibutton-icon:focus-visible {
-  /*Fill the focus thing when tabbed on*/
-  transition-duration:0.5s;
-  border-radius:0px;
-}
-a:visited.ibutton-icon  {
-  color:white; /*Force disable custom visited color*/
-}
-
-.ibutton-icon {
-  /*Specific to the icon image*/
-  height:max(6vw,60px);
-  width:max(6vw,60px);
-}
-
-.ibutton-triplet {
-  display:inline-block;
-  background: rgb(0,0,0);
-background: linear-gradient(291deg, rgba(0,0,0,1) 19%, rgba(37,0,135,1) 100%);
-  font-family: 'Ubuntu', sans-serif;
-  font-size:20px;
-  width: max(15vw, 100px);
-  text-align:center;
-  padding:2.5%;
-  border-radius:100px;
-  color:white;
-  text-decoration:none;
-transition-duration:0.5s;
-}
-.ibutton-triplet:hover {
-  transition-duration:0.5s;
-  border-radius:20px;
-}
-
-.ibutton-triplet:focus-visible {
-  transition-duration:0.5s;
-  border-radius:0px;
-}
-a:visited.ibutton-triplet {
-  color:white;
-}
-
-.buttondiv {
-  display:flex; /*Without flex, it looked weird.*/
-  margin-left:auto;
-  margin-right:auto;
-  width:100%;
-  flex-direction:row;
-  justify-content:space-around;
-}
