@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>TEMPLATE</title>
+<title>Post</title>
 <link rel="stylesheet" href="css.css">
 <!--Cool font blah blah blah-->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
 <meta name="msapplication-config" content="/icons/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 <script src="scripts.js"></script>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
@@ -34,11 +34,71 @@
 </div>
 
 <div class="parallax-img">
-  <h1 class="para-header">PUT TEXT HERE AND CHANGE THE PNG</h1>
+  <h1 class="para-header" id="postTitleArea">loading...</h1>
 </div>
 <div class="main">
-  <h2>PUT THING HERE</h2>
+  <div id="postdiv">
+    <p>Nothing appears to have loaded yet. Try loading it yourself.</p>
+    <button class="button" style="border:0;" onclick="manualLoad();">Manual Load</button>
+  </div>
 </div>
+<script>
+//Postloader script
+
+//Error catching vars
+var hasRequestCompleted = false;
+var reqcode;
+// How long to wait to check status(give it enough time to complete the request!)
+var blogErrWaitTime = 1000;
+
+function loadPost(what) {
+  const xhttp = new XMLHttpRequest();
+  var postdiv = document.getElementById('postdiv');
+  var titleText = document.getElementById('postTitleArea');
+  xhttp.onload = function() {
+    console.log("CODE: " + xhttp.status);
+    reqcode = xhttp.status;
+    console.log(this.responseText);
+    postdiv.innerHTML = this.responseText;
+    document.title = what.replace('posts/','').replace('.html','');
+    titleText.innerHTML = document.title;
+    hasRequestCompleted = true;
+    }
+  xhttp.open("GET", what, true);
+  xhttp.send();
+  setTimeout(CatchErr, blogErrWaitTime);
+}
+
+function manualLoad() {
+  loadPost(prompt("Enter filename","posts/samplepost.html"));
+}
+
+function CatchErr() {
+  var postdivInner = document.getElementById('postdiv').innerHTML;
+  if (hasRequestCompleted == false) {
+    // In the 1 second given, XMLHttpRequest did not resolve.
+    console.warn('Suspiciously long load time... Make sure you\'re using localhost!');
+    document.getElementById('postdiv').innerHTML = "<p>FATAL ERROR! If you are testing code, remember to use <code>localhost</code> or else the HTTP(S) request will fail.</p> <p>If you are a user, this may occur when it is taking too long. If you think your connection just needs more time, wait a few seconds. If it still does not load, refresh the page, or try again later.</p>";
+  } else if(reqcode !== 200) {
+    console.warn("There is an error code of " + reqcode);
+  } else {
+    console.log('Error Catcher says smooth sailing!');
+  }
+}
+
+//Load the post when everything is ready
+document.addEventListener('DOMContentLoaded', (event) => {
+    //Get query string
+    const params = new URLSearchParams(window.location.search);
+    if(params.has('file')) {
+      //We can call loadPost() and get everything ready for the user
+      //But we need to do a bit of cleanup
+      var urlChange = params.get('file');
+      urlChange = urlChange.replace(/['"]+/g, ''); //Remove quotations, confuses system blahblahblah
+      loadPost(urlChange); //Now try
+    }
+  })
+</script>
 <footer>
   <h2>stopmotio.github.io</h2>
   <p>Fonts from <a href="https://fonts.google.com/">Google Fonts.</a></p>

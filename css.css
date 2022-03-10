@@ -82,7 +82,7 @@ p {
   .nav-plist {
     display:none; /*FLEX for ON, NONE for OFF*/
     position:fixed;
-    /*padding-top:50px; /*Fix for when there are more than 5 links, but breaks when it actually fits*/
+    padding-top:50px; /*Fix for when there are more than 5 links, but breaks when it actually fits
     width:100%;
     box-sizing:border-box;
     height:80vw;
@@ -328,6 +328,31 @@ a:visited.ibutton-triplet {
   width:100%;
   flex-direction:row;
   justify-content:space-around;
+}
+
+.blog-post-link {
+  display:block;
+  box-sizing:border-box;
+  width:100%;
+  text-align:center;
+  font-family: 'Ubuntu', sans-serif;
+  color:white;
+  text-decoration:none;
+  background-color:#494853;
+  padding:min(5%, 25px);
+}
+
+a:visited.blog-post-link {
+  color:white;
+}
+
+.blog-post-altcolor {
+  background-color:#34333a;
+}
+
+.round-corner {
+  border-radius:15px;
+  overflow:hidden;
 }
 
 .main {
