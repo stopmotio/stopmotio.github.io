@@ -82,10 +82,10 @@ p {
   .nav-plist {
     display:none; /*FLEX for ON, NONE for OFF*/
     position:fixed;
-    padding-top:50px; /*Fix for when there are more than 5 links, but breaks when it actually fits
+    padding-top:70px; /*Fix for when there are more than 5 links, but breaks when it actually fits*/
     width:100%;
     box-sizing:border-box;
-    height:80vw;
+    height:85vw;
     bottom:50px;
     background: rgb(0,0,0);
     background: linear-gradient(30deg, rgba(0,0,0,1) 0%, rgba(0,29,115,1) 100%);
