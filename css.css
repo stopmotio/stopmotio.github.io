@@ -508,4 +508,7 @@ button.nostyle { /*Fix some fringe issues with HTML buttons, mostly on the ig bi
   max-height:60vh;
 }
 
-/*Demoimgright removed because it was better to use inline CSS to do that.*/
+#postdiv {
+  /*Specific to Chatterbox posts, also broken apparently*/
+  line-height:3em;
+}
