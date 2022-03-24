@@ -52,6 +52,20 @@ p {
     color:blue;
     font-size:20px;
   }
+  .headerwarn {
+    /*Only appears if the browser has JS off*/
+    position:fixed;
+    bottom:0;
+    width:100%;
+    left:0;
+    background-color: #fc3939;
+    display:block;
+    color:white;
+    font-family:sans-serif;
+    text-align:center;
+    padding:1%;
+    box-sizing:border-box;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -113,6 +127,20 @@ p {
   }
   .nav-page:visited {
     color:white;
+  }
+  .headerwarn {
+    /*Only appears if the browser has JS off*/
+    position:fixed;
+    top:0;
+    width:100%;
+    left:0;
+    background-color: #fc3939;
+    display:block;
+    color:white;
+    font-family:sans-serif;
+    text-align:center;
+    padding:1%;
+    box-sizing:border-box;
   }
 }
 
