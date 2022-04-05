@@ -508,7 +508,15 @@ button.nostyle { /*Fix some fringe issues with HTML buttons, mostly on the ig bi
   max-height:60vh;
 }
 
-#postdiv {
-  /*Specific to Chatterbox posts, also broken apparently*/
-  line-height:3em;
+.postdiv {
+  /*Specific to Chatterbox posts, behaves strangely in localhost*/
+  line-height:2;
+}
+@media only screen and (min-width: 800px) {
+  .postdiv {
+    /*Apply some additional CSS to make it a small column of text that's easier to read*/
+    margin-left:auto;
+    width:700px;
+    margin-right:auto;
+  }
 }
